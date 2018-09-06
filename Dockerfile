@@ -10,8 +10,8 @@ RUN groupadd -r jboss -g 1000 && useradd -u 1000 -r -g jboss -m -d /opt/jboss -s
 RUN apt-get update && apt-get install -y curl gpg openjdk-11-jre-headless
 
 # Set the WILDFLY_VERSION env variable
-ENV WILDFLY_VERSION 13.0.0.Final
-ENV WILDFLY_SHA1 3d63b72d9479fea0e3462264dd2250ccd96435f9
+ENV WILDFLY_VERSION 14.0.0.Final
+ENV WILDFLY_SHA1 9a6c81463857bc2c7afc843b359be9a5b1806624
 ENV JBOSS_HOME /opt/jboss/wildfly
 
 USER root
