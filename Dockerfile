@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM adoptopenjdk/openjdk11:jdk-11.0.1.13-slim
 
 # Create a user and group used to launch processes
 # The user ID 1000 is the default for the first "regular" user on Fedora/RHEL,
@@ -7,11 +7,9 @@ FROM ubuntu:18.04
 RUN groupadd -r jboss -g 1000 && useradd -u 1000 -r -g jboss -m -d /opt/jboss -s /sbin/nologin -c "JBoss user" jboss && \
     chmod 755 /opt/jboss
 
-RUN apt-get update && apt-get install -y curl gpg openjdk-11-jre-headless
-
 # Set the WILDFLY_VERSION env variable
-ENV WILDFLY_VERSION 14.0.1.Final
-ENV WILDFLY_SHA1 757d89d86d01a9a3144f34243878393102d57384
+ENV WILDFLY_VERSION 15.0.0.Final
+ENV WILDFLY_SHA1 a387f2ebf1b902fc09d9526d28b47027bc9efed9
 ENV JBOSS_HOME /opt/jboss/wildfly
 
 USER root
