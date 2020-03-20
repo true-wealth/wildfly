@@ -1,4 +1,4 @@
-FROM adoptopenjdk:13.0.1_9-jdk-hotspot
+FROM adoptopenjdk:13.0.2_8-jdk-hotspot
 
 # Create a user and group used to launch processes
 # The user ID 1000 is the default for the first "regular" user on Fedora/RHEL,
@@ -8,8 +8,8 @@ RUN groupadd -r jboss -g 1000 && useradd -u 1000 -r -g jboss -m -d /opt/jboss -s
     chmod 755 /opt/jboss
 
 # Set the WILDFLY_VERSION env variable
-ENV WILDFLY_VERSION 18.0.0.Final
-ENV WILDFLY_SHA1 2d4778b14fda6257458a26943ea82988e3ae6a66
+ENV WILDFLY_VERSION 19.0.0.Final
+ENV WILDFLY_SHA1 0d47c0e8054353f3e2749c11214eab5bc7d78a14
 ENV JBOSS_HOME /opt/jboss/wildfly
 
 USER root
