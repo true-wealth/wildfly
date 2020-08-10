@@ -1,4 +1,4 @@
-FROM adoptopenjdk:14.0.1_7-jdk-hotspot
+FROM adoptopenjdk:14.0.2_8-jdk-hotspot
 
 # Create a user and group used to launch processes
 # The user ID 1000 is the default for the first "regular" user on Fedora/RHEL,
